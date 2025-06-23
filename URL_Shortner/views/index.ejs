@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>URL-Shortner</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-image: linear-gradient(to right, #f12711, #f5af19);
+        }
+
+        div {
+            text-align: center;
+            margin-top: 20%;
+            background: black;
+            color: white;
+            width: 70%;
+            border-radius: 10px;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+        }
+
+        input {
+            width: 50%;
+            padding: 10px;
+            font-size: 1.5rem;
+        }
+
+        button {
+            padding: 10px;
+            font-size: 1.5rem;
+            background: blue;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        input,
+        button {
+            border-radius: 5px;
+            border: none;
+        }
+
+        button:hover {
+            background: peachpuff;
+            color: black;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div>
+        <h1>URL - Shortner</h1>
+        <form action="/short" method="POST">
+            <input type="text" id="longUrl" name="longUrl" placeholder="Enter URL" required>
+            <button type="submit">Shorten</button>
+        </form>
+        <br>
+        <% if(shortUrl) { %>
+            <p>Short URL :- <a href="<%= shortUrl %>" target="_blank">
+                <%= shortUrl %>
+            </p>
+            <% } %>
+
+    </div>
+
+</body>
+
+</html>

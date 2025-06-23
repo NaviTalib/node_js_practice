@@ -1,0 +1,23 @@
+username : talibali786ta
+password : RubQ6t2kolSYfE5N
+
+
+app.use(express.urlencoded({ extended: true }));
+
+
+mongoose.connect('mongodb+srv://talibali786ta:RubQ6t2kolSYfE5N@cluster0.7w7wg.mongodb.net/', {
+    dbName: 'test'
+}).then(() => {
+    console.log('Database connected');
+}).catch((err) => {
+    console.log(err);
+});
+
+
+// cloudinary
+
+Cloud name	: dcf0vk1os
+API key	: 772794948236772
+API secret	: LuIPNvLmQ4iaFe7WpdmD_GWHgXI
+
+API environment variable CLOUDINARY_URL=cloudinary://772794948236772:LuIPNvLmQ4iaFe7WpdmD_GWHgXI@dcf0vk1os

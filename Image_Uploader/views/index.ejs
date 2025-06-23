@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image - Uploader</title>
+    <style>
+        body{
+            background-image: linear-gradient(to right, orange,red);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .container {
+            width: 70%;
+            margin: 0 auto;
+            text-align: center;
+            background-color: white;
+            border-radius: 10px
+        }
+        input{
+            background-image: linear-gradient(to right, red,orange);
+            
+        }
+        button {
+            background-color:orange;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+
+        }
+        input,button {
+            padding: 10px 20px;
+            margin-top: 20px;
+            border-radius: 5px;
+        }
+        button:hover {
+            background-color: red;
+        }
+        #preview {
+            margin-top: 20px;
+        }
+        #preview img {
+            width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="container">
+        <h1>Image Uploader</h1>
+        <form action="/upload" method="post" enctype="multipart/form-data">
+            <label for="image">Choose Image</label>
+            <input type="file" name="file" id="file-input">
+            <button type="submit">Upload</button>
+            <div id="preview">
+                <% if(url) { %>
+                    <h2>file uploaded sucessfully</h2>
+                    <img src="<%= url %>" alt="Image">
+                <% } %>
+            </div>
+        </form>
+    </div>
+    
+</body>
+</html>
